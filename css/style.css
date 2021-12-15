@@ -61,7 +61,7 @@ body {
   font-size: 10px;
 }
 
-textarea {
+input {
   height: 100%;
   border-radius: 0;
   padding: 8px;
@@ -73,19 +73,19 @@ textarea {
   resize: none;
 }
 
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   color: rgba(175, 175, 252, 0.8);
 }
 
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder {
   color: rgba(175, 175, 252, 0.8);
 }
 
-textarea::-ms-input-placeholder {
+input::-ms-input-placeholder {
   color: rgba(175, 175, 252, 0.8);
 }
 
-textarea::placeholder {
+input::placeholder {
   color: rgba(175, 175, 252, 0.8);
 }
 

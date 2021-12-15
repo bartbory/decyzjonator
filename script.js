@@ -1,5 +1,5 @@
 const btn = document.querySelector('.btn')
-const input = document.querySelector('textarea')
+const input = document.querySelector('input')
 const answer = document.querySelector('.answer')
 const error = document.querySelector('.error')
 const loadStatus = document.querySelector('.status')
@@ -28,6 +28,13 @@ const checkInput = () => {
     loadStatus.classList.remove('loading')
 }
 
+input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault()
+        loadStatus.classList.add('loading')
+        setTimeout(checkInput, 2000)
+    }
+})
 btn.addEventListener('click', () => {
     loadStatus.classList.add('loading')
     setTimeout(checkInput, 2000)
