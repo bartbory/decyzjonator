@@ -4,7 +4,7 @@ const answer = document.querySelector('.answer')
 const error = document.querySelector('.error')
 const loadStatus = document.querySelector('.status')
 
-const answers = ['Nie mogę Ci tego zdradzić...', 'Toż to nie możliwe!', 'No a jak!', 'A weź się w łeb pier%#@!nij!', 'Gwiazdy mówią że: chyba nie wiem... ale może.', 'Prawdopodobnie jak najbardziej.', 'Po ciemnku to i oświecony w ściane wejdzie', 'Oczywiście!', 'Nieee.... nieee.. po prostu, nie.', 'Ja yhy...', 'Letko panie!', 'Zapomnij... odwróć się i wyjdź... będę udawać, że nie było tematu.', 'A gdyby tak...?', 'Wiadomo!']
+const answers = ['Nie mogę Ci tego zdradzić...', 'Toż to nie możliwe!', 'No a jak!', 'A jak myślisz?', 'Gwiazdy mówią że: chyba nie wiem... ale może.', 'Prawdopodobnie jak najbardziej.', 'Po ciemnku to i oświecony w ściane wejdzie', 'Oczywiście!', 'Nieee.... nieee.. po prostu, nie.', 'Ja yhy...', 'Letko panie!', 'Zapomnij... odwróć się i wyjdź... będę udawać, że nie było tematu.', 'A gdyby tak...?', 'Wiadomo!']
 
 const showAnswer = () => {
     let random = Math.floor(Math.random() * answers.length)
