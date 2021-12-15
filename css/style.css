@@ -54,50 +54,32 @@
 }
 
 body {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 100vh;
   background-color: #1a1a1a;
   font-family: 'Roboto Mono', sans-serif;
   color: #afaffc;
   font-size: 10px;
 }
 
-input {
-  height: 100%;
-  border-radius: 0;
-  padding: 8px;
-  color: #afaffc;
-  background-color: rgba(0, 0, 0, 0.08);
-  border: none;
-  width: 100%;
-  font-size: 2.4em;
-  resize: none;
-}
-
-input::-webkit-input-placeholder {
-  color: rgba(175, 175, 252, 0.8);
-}
-
-input:-ms-input-placeholder {
-  color: rgba(175, 175, 252, 0.8);
-}
-
-input::-ms-input-placeholder {
-  color: rgba(175, 175, 252, 0.8);
-}
-
-input::placeholder {
-  color: rgba(175, 175, 252, 0.8);
-}
-
 .wrapper {
   height: 500px;
   border-radius: 24px;
   padding: 16px 0;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,8 +95,8 @@ input::placeholder {
 }
 
 .wrapper .textArea {
-  -ms-flex-preferred-size: 160px;
-      flex-basis: 160px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   margin: 0 16px;
   background-color: #414d54;
   padding: 16px;
@@ -125,6 +107,7 @@ input::placeholder {
 
 .wrapper .control-area {
   margin: 0 16px;
+  padding: 24px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,6 +115,8 @@ input::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 .wrapper .control-area button {
@@ -144,6 +129,8 @@ input::placeholder {
   -webkit-box-shadow: 0 0 16px #a562a5, inset 0px 16px 24px rgba(254, 82, 191, 0.8);
           box-shadow: 0 0 16px #a562a5, inset 0px 16px 24px rgba(254, 82, 191, 0.8);
   cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .wrapper .control-area .info-section {
@@ -198,5 +185,77 @@ input::placeholder {
 .loading {
   -webkit-animation: loading-animation 2s 1;
           animation: loading-animation 2s 1;
+}
+
+input {
+  height: 100%;
+  border-radius: 0;
+  padding: 8px;
+  color: #afaffc;
+  background-color: rgba(0, 0, 0, 0.08);
+  border: none;
+  width: 100%;
+  font-size: 2.4em;
+  resize: none;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(175, 175, 252, 0.8);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(175, 175, 252, 0.8);
+}
+
+input::-ms-input-placeholder {
+  color: rgba(175, 175, 252, 0.8);
+}
+
+input::placeholder {
+  color: rgba(175, 175, 252, 0.8);
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    height: 300px;
+    border-radius: 8px;
+    padding: 16px 0;
+    font-size: 8px;
+  }
+  .wrapper .textArea {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin: 0 16px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  .wrapper .control-area {
+    margin: 0 24px;
+    padding: 16px 0;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .wrapper .control-area button {
+    height: 64px;
+    border-radius: 32px;
+    padding: 0;
+    width: 64px;
+    -webkit-box-shadow: 0 0 16px #a562a5, inset 0px 8px 16px rgba(254, 82, 191, 0.8);
+            box-shadow: 0 0 16px #a562a5, inset 0px 8px 16px rgba(254, 82, 191, 0.8);
+  }
+  .wrapper .control-area .info-section .status-bg {
+    height: 4px;
+    border-radius: 2px;
+    padding: 0;
+    background-color: #313131;
+  }
+  .wrapper .control-area .info-section .status-bg .status {
+    background: -webkit-gradient(linear, right top, left top, from(#a562a5), to(#1d219b));
+    background: linear-gradient(-90deg, #a562a5, #1d219b);
+    height: 4px;
+    border-radius: 2px;
+    padding: 0;
+    width: 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
