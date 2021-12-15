@@ -7,51 +7,47 @@
     box-sizing: border-box
 
 body
-    height: 100vh
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    align-content: center
+    min-height: 100vh
     background-color: #1a1a1a
     font-family: 'Roboto Mono', sans-serif
     color: $base-font
     font-size: 10px
-input
-    @include proportion(100%, 0, 8px)
-    color: $base-font
-    background-color: rgba(0,0,0,.08)
-    border: none
-    width: 100%
-    font-size: 2.4em
-    resize: none
-    &::placeholder
-        color: rgba($base-font,.8)
+
 .wrapper
     @include proportion(500px, 24px, 16px 0)
-    position: relative
-    top: 50%
-    transform: translateY(-50%)
-    margin: 0 auto
     display: flex
     flex-direction: column
     justify-content: space-between
     max-width: 800px
     background-color: #262626
     .textArea
-        flex-basis: 160px
+        flex-basis: 40%
         margin: 0 16px
         background-color: #414d54
         padding: 16px
         border-radius: 16px
         box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16)
+        
 
     .control-area
         margin: 0 16px
+        padding: 24px 0
         display: flex
         flex-direction: row
+        flex-basis: 20%
         button
             @include proportion(106px, 53px, 0)
             width: 106px
             background: linear-gradient(135deg, $purple, #1d219b)
             border: none
-            box-shadow: 0 0 16px $purple, inset 0px 16px 24px rgba(254, 82, 191, 0.8);
+            box-shadow: 0 0 16px $purple, inset 0px 16px 24px rgba(254, 82, 191, 0.8)
             cursor: pointer
+            flex-shrink: 0
         .info-section
             display: flex
             flex-direction: column
@@ -78,3 +74,41 @@ input
 
 .loading
     animation: loading-animation 2s 1
+
+input
+    @include proportion(100%, 0, 8px)
+    color: $base-font
+    background-color: rgba(0,0,0,.08)
+    border: none
+    width: 100%
+    font-size: 2.4em
+    resize: none
+    &::placeholder
+        color: rgba($base-font,.8)
+
+@media (max-width: 1024px)
+
+    .wrapper
+        @include proportion(300px, 8px, 16px 0)
+        font-size: 8px
+        .textArea
+            flex-basis: 40%
+            margin: 0 16px
+            padding: 8px
+            border-radius: 4px
+        .control-area
+            margin: 0 24px
+            padding: 16px 0
+            flex-basis: 20%
+            button
+                @include proportion(64px, 32px, 0)
+                width: 64px
+                box-shadow: 0 0 16px $purple, inset 0px 8px 16px rgba(254, 82, 191, 0.8)
+            .info-section
+                .status-bg
+                    @include proportion(4px, 2px, 0)
+                    background-color: #313131
+                    .status
+                        background: linear-gradient(-90deg, $purple, #1d219b)
+                        @include proportion(4px, 2px, 0)
+                        width: 0%
